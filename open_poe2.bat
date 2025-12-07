@@ -1,34 +1,34 @@
 @echo off
-REM POE2 다음 사이트를 Edge로 여는 배치 파일
-REM 더블클릭하여 실행하세요
+REM POE2 Daum Site Launcher
+REM Double-click to run
 
-title POE2 다음 사이트 열기
+title Opening POE2 Site
 
 echo ================================================================
 echo.
-echo   POE2 (Path of Exile 2) 다음 사이트 열기
+echo   Path of Exile 2 - Daum Site Launcher
 echo.
 echo ================================================================
 echo.
 
 set "URL=https://pathofexile2.game.daum.net/main"
 
-REM Edge 실행 경로 확인
+REM Find Edge executable
 if exist "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" (
-    echo Edge 브라우저로 열고 있습니다...
+    echo Opening in Edge browser...
     start "" "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" "%URL%"
     echo.
-    echo [성공] Edge로 사이트를 열었습니다!
+    echo [SUCCESS] Opened site in Edge!
 ) else if exist "C:\Program Files\Microsoft\Edge\Application\msedge.exe" (
-    echo Edge 브라우저로 열고 있습니다...
+    echo Opening in Edge browser...
     start "" "C:\Program Files\Microsoft\Edge\Application\msedge.exe" "%URL%"
     echo.
-    echo [성공] Edge로 사이트를 열었습니다!
+    echo [SUCCESS] Opened site in Edge!
 ) else (
-    echo Edge를 찾을 수 없습니다. microsoft-edge 프로토콜로 시도합니다...
+    echo Edge not found. Trying microsoft-edge protocol...
     start microsoft-edge:%URL%
     echo.
-    echo [완료] 사이트 열기를 시도했습니다.
+    echo [DONE] Attempted to open site.
 )
 
 echo.
