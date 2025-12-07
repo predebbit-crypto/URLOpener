@@ -9,6 +9,14 @@ venv/
 ENV/
 .venv
 
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Compiled executables
+*.exe
+
 # OS
 .DS_Store
 Thumbs.db
